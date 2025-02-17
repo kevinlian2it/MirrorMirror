@@ -1,10 +1,13 @@
 from langchain_openai import OpenAIEmbeddings
 import openai
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 class EmbeddingService:
     def __init__(self, model_name="text-embedding-3-small"):
-        openai.api_key = os.environ.get("OPENAI_API_KEY")
         self.embedding_model = OpenAIEmbeddings(model=model_name)
 
     def generate_embedding(self, text):

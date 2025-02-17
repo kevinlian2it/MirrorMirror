@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+joblib
+numpy
+pandas
+keras
+scikit-learn
+torch
+langchain-openai
+chromadb
+dotenv
+requests
