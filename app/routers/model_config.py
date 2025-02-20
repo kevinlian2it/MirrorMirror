@@ -1,9 +1,7 @@
 from fastapi import APIRouter, HTTPException
-from app.services.classifier import ClassifierService
+from app.services.classifier import classifier_service
 
 router = APIRouter()
-
-classifier_service = ClassifierService()
 
 @router.post("/update")
 def update_model(model_type: str):
