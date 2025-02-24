@@ -3,7 +3,6 @@ import openai
 import os
 from dotenv import load_dotenv
 from fastapi import APIRouter, HTTPException
-from app.services.classifier import ClassifierService
 
 router = APIRouter()
 
